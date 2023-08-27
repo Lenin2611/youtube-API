@@ -1,0 +1,142 @@
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+    overflow-x: hidden !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+aside {
+    transition-duration: 200ms;
+    display: flex;
+    overflow-y: hidden;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 240px !important;
+    overflow-y: scroll;
+}
+
+.sidebar-top {
+    height: 56px;
+    padding-left: 16px;
+    display: flexbox;
+    display: flex;
+    align-items: center;
+    position: sticky !important;
+    top: 0px;
+    background-color: #fff;
+}
+
+.navbar-toggler {
+    padding: 8px;
+    border: 0;
+    border-radius: 100%;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:hover {
+    border: 0;
+    box-shadow: none;
+    background-color: #ebebeb;
+}
+
+.navbar-toggler:focus {
+    background-color: #dcdcdc;
+}
+
+.sidebar-img {
+    padding: 18px 14px 18px 16px;
+    height: 20px;
+    width: 90px;
+}
+
+.sidebar-bottom {
+    padding-inline: 12px;
+}
+
+.sidebar-center {
+    padding: 12px;
+}
+
+.sidebar-center-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-center-text {
+    --paper-item-focused-before-border-radius: 10px;
+    --paper-item-focused-before-background: var( --ytd-guide-entry-renderer-focused-guide-item-background-color, var(--yt-spec-icon-active-other) );
+    padding: 7px 12px;
+    min-width: 0;
+}
+
+.sidebar-center-text {
+    --paper-item-focused-before-border-radius: 10px;
+    --paper-item-focused-before-background: var( --ytd-guide-entry-renderer-focused-guide-item-background-color, var(--yt-spec-icon-active-other) );
+}
+
+.sidebar-center-1 {
+    border-bottom: 1px solid var(--yt-spec-10-percent-layer);
+}
+
+.sidebar-center-link span {
+    font-size: 14px;
+    line-height: 19px;
+    width: 140px;
+    font-weight: 500;
+    color: #1b1b1b;
+}
+
+.sidebar-center-text:hover {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+
+.sidebar-center-1,.sidebar-center-2,.sidebar-center-3,.sidebar-center-4,.sidebar-center-5 {
+    margin-bottom: 15px;
+}
+
+.sidebar-center-2,.sidebar-center-3,.sidebar-center-4,.sidebar-center-5,.sidebar-bottom {
+    margin-top: 15px;
+}
+
+.linea {
+    border-bottom: #ebebeb solid 2px;
+}
+
+.sidebar-bottom-box {
+    margin-bottom: 10px;
+}
+
+.sidebar-bottom-link a{
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: px;
+    color: #6a6a6a;
+}
+
+.sidebar-bottom-link {
+    height: 18px;
+}
+
+.sidebar-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.sidebar-bottom-text {
+    font-size: 12px;
+    color: #9b9b9b;
+    margin-top: 15px;
+}
