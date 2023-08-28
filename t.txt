@@ -1,0 +1,9 @@
+<div class="recomendados-box">
+                    <img class="recomendados-miniatura" src="${value.thumbnails[0].url}" alt="Miniatura">
+                    <div class="recomendados-informacion">
+                        <div class="recomendados-title">${value.title}</div>
+                        <div class="recomendados-channel">${value.author.title}</div>
+                        <div class="recomendados-views">${value.stats.views}</div>
+                        <div class="recomendados-date">${value.publishedTimeText}</div>
+                    </div>
+                </div>
