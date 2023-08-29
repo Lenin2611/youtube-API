@@ -15,9 +15,15 @@ a {
 }
 
 nav {
-    position: sticky;
+    position: static;
     top: 0;
     background-color: #fff;
+    width: 100vw;
+}
+
+.header-top {
+    justify-content: space-around;
+    width: 100vw;
 }
 
 .sidebar {
@@ -152,12 +158,20 @@ nav {
     margin-top: 15px;
 }
 
-.form-control {
-    width: 30vw !important;
+input {
+    width: 40vw !important;
+
+    border: none !important;
+    box-shadow: none;
 }
 
-.form-control:focus {
+input:focus,input:active {
+    width: 40vw !important;
+    height: 40px;
+    border-radius: 50px 0px 0px 50px;
     box-shadow: none;
+    border: none !important;
+    
 }
 
 .header-lupa {
@@ -201,4 +215,117 @@ header span {
 
 header span:hover {
     background-color: #e3e3e3;
+}
+
+@media screen and (max-width: 999px) {
+    nav {
+        align-items: center;
+    }
+
+    .nav-container {
+        min-width: 100% !important;
+        height: 56px;
+        padding: 0px 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .header-top-left {
+        margin-right: 10vw;
+        position: fixed;
+        left: 0;
+    }
+
+    .header-top-center {
+        margin-right: 4vw;
+        position: fixed;
+        left: 33%;
+    }
+
+    .header-top-right {
+        justify-content: flex-end;
+        position: fixed;
+        right: 0;
+    }
+
+    input {
+        width: 20vw !important;
+    }
+}
+
+@media screen and (max-width: 656px) {
+    .header-top-center {
+        display: none !important;
+    }
+
+    .lupita {
+        display: initial !important;
+        border: none !important;
+    }
+
+    .lupita:hover {
+        background-color: #e3e3e3 !important;
+    }
+}
+
+main {
+    margin: 50px 0px 0px 90px;
+}
+
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.videos-container a {
+    color: #030303;
+}
+
+.miniatura-movible {
+    display: none;
+    width: 350px;
+    height: 196px;
+}
+
+.miniatura {
+    width: 350px;
+}
+
+.videos-container a:hover .miniatura-movible {
+    display: block;
+}
+
+.videos-container a:hover .miniatura {
+    display: none;
+}
+
+.videos-container a {
+    margin: 10px;
+}
+
+.video-informacion {
+    margin-left: 10px;
+}
+
+.division {
+    margin-top: 10px;
+    display: flex;
+}
+
+.division img {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.video-titulo {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.video-canal,.video-views,.video-fecha {
+    font-size: 13px;
 }
