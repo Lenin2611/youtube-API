@@ -20,6 +20,11 @@ nav {
     width: 100vw;
 }
 
+.header-top {
+    justify-content: space-around;
+    width: 100vw;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -154,13 +159,14 @@ nav {
 
 input {
     width: 40vw !important;
+
     border: none !important;
     box-shadow: none;
 }
 
 input:focus,input:active {
     width: 40vw !important;
-    height: 34px;
+    height: 40px;
     border-radius: 50px 0px 0px 50px;
     box-shadow: none;
     border: none !important;
@@ -171,13 +177,28 @@ input:focus,input:active {
     padding-inline: 23px !important;
 }
 
-main {
+.left {
     margin: 90px 0px 0px 7vw;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 690px 200px;
+    grid-template-rows: repeat(fit-content);
+    grid-template-areas: "top right" "center right" "bottom right";
+}
+
+#myRecomendados {
+    grid-area: right;
+}
+
+#myDescripcion {
+    grid-area: center;
+}
+
+#myComentarios {
+    grid-area: bottom;
 }
 
 .video {
+    grid-area: top;
     height: 40vw;
     max-height: 720px;
     width: 660px;
@@ -484,9 +505,100 @@ iframe {
     padding: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
+    nav {
+        align-items: center;
+    }
+
+    .nav-container {
+        min-width: 100% !important;
+        height: 56px;
+        padding: 0px 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .header-top-left {
+        margin-right: 10vw;
+        position: fixed;
+        left: 0;
+    }
+
+    .header-top-center {
+        margin-right: 4vw;
+        position: fixed;
+        left: 33%;
+    }
+
+    .header-top-right {
+        justify-content: flex-end;
+        position: fixed;
+        right: 0;
+    }
+
+    input {
+        width: 20vw !important;
+    }
+
     main {
         display: flex;
         flex-direction: column;
+    }
+
+    .left {
+        margin-inline: 2.6vw;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: repeat(800px);
+        grid-template-areas: "top" "center" "center2" "bottom";
+    }
+
+    .video {
+        grid-area: top;
+        width: 95vw;
+        height: 53.5vw;
+    }
+
+    .descripcion,.comentarios {  
+        width: 95vw;
+    }
+
+    #myDescription {
+        grid-area: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #myRecomendados {
+        grid-area: center2;
+        margin-left: 0px !important;
+    }
+
+    #myComentarios {
+        grid-area: bottom;
+        width: 95vw;
+    }
+
+    .recomendados-box,.recomendados-title {
+        width: 55vw !important;
+        white-space: normal !important;
+        margin-inline: 0px;
+    }
+}
+
+@media screen and (max-width: 656px) {
+    .header-top-center {
+        display: none !important;
+    }
+
+    .lupita {
+        display: initial !important;
+        border: none !important;
+    }
+
+    .lupita:hover {
+        background-color: #e3e3e3 !important;
     }
 }

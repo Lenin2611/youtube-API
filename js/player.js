@@ -208,3 +208,11 @@ input.addEventListener('keydown', function (event) {
         page();
     }
 });
+
+function appear() {
+    const buscar = documer.querySelector("#aparecer");
+    buscar.style = "display: initial !important";
+}
+
+const input2 = document.querySelector("#lupita");
+input2.addEventListener('click', appear);
