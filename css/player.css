@@ -180,8 +180,8 @@ input:focus,input:active {
 .left {
     margin: 90px 0px 0px 7vw;
     display: grid;
-    grid-template-columns: 690px 200px;
-    grid-template-rows: repeat(fit-content);
+    grid-template-columns: 700px calc(100vw - 700px);
+    grid-template-rows: repeat(3, fit-content);
     grid-template-areas: "top right" "center right" "bottom right";
 }
 
