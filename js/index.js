@@ -37,8 +37,10 @@ let video = async() => {
                         <div class="video-informacion">
                             <div class="video-titulo">${value.video.title}</div>
                             <div class="video-canal">CreativeCode</div>
-                            <div class="video-views">${value.video.stats.views} views</div>
-                            <div class="video-fecha">${value.video.publishedTimeText}</div>
+                            <div class="d-flex">
+                                <div class="video-views">${value.video.stats.views} views <strong>•</strong></div>
+                                <div class="video-fecha">${value.video.publishedTimeText}</div>
+                            </div>
                         </div>
                     </div>
                 </a>`
@@ -52,8 +54,10 @@ let video = async() => {
                         <div class="video-informacion">
                             <div class="video-titulo">${value.video.title}</div>
                             <div class="video-canal">CreativeCode</div>
-                            <div class="video-views">${value.video.stats.views} views</div>
-                            <div class="video-fecha">${value.video.publishedTimeText}</div>
+                            <div class="d-flex">
+                                <div class="video-views">${value.video.stats.views} views</div>
+                                <div class="video-fecha">${value.video.publishedTimeText}</div>
+                            </div>
                         </div>
                     </div>
                 </a>`;

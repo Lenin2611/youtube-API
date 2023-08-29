@@ -6,7 +6,7 @@ let searchAt = async () => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '4ff04fe482mshcca87e0ce54b941p16fe8djsn0b9a16d15314',
+            'X-RapidAPI-Key': 'c930438bbamshf4fd06c44aa586cp1f7f03jsn1cbafc6e2720',
             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         }
     };
@@ -26,7 +26,7 @@ let videoInfo = async(id) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '4ff04fe482mshcca87e0ce54b941p16fe8djsn0b9a16d15314',
+            'X-RapidAPI-Key': 'c930438bbamshf4fd06c44aa586cp1f7f03jsn1cbafc6e2720',
             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         }
     };
@@ -45,7 +45,7 @@ let comentario = async (id) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '4ff04fe482mshcca87e0ce54b941p16fe8djsn0b9a16d15314',
+            'X-RapidAPI-Key': 'c930438bbamshf4fd06c44aa586cp1f7f03jsn1cbafc6e2720',
             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         }
     };
@@ -65,7 +65,7 @@ let relatedVideo = async (id) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '4ff04fe482mshcca87e0ce54b941p16fe8djsn0b9a16d15314',
+            'X-RapidAPI-Key': 'c930438bbamshf4fd06c44aa586cp1f7f03jsn1cbafc6e2720',
             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         }
     };

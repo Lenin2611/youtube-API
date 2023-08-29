@@ -286,16 +286,18 @@ main {
 
 .miniatura-movible {
     display: none;
-    width: 350px;
-    height: 196px;
+    width: 27.37vw;
+    height: 15.3vw;
 }
 
 .miniatura {
-    width: 350px;
+    width: 27.37vw;
+    border-radius: 10px;
 }
 
 .videos-container a:hover .miniatura-movible {
     display: block;
+    border-radius: 0px;
 }
 
 .videos-container a:hover .miniatura {
@@ -304,6 +306,10 @@ main {
 
 .videos-container a {
     margin: 10px;
+}
+
+.video-fecha {
+    margin-left: 5px;
 }
 
 .video-informacion {
@@ -317,15 +323,72 @@ main {
 
 .division img {
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    width: 3vw;
+    height: 3vw;
 }
 
 .video-titulo {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 1.2vw;
 }
 
 .video-canal,.video-views,.video-fecha {
-    font-size: 13px;
+    font-size: 1vw;
+    color: #6a6a6a;
+}
+
+@media screen and (max-width: 1081px) {
+    .video-titulo {
+        font-size: 2vw;
+    }
+    
+    .video-canal,.video-views,.video-fecha {
+        font-size: 1.3vw;
+    }
+
+    .division img {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+
+    .miniatura-movible {
+        width: 40vw;
+        height: 22.38vw;
+    }
+    
+    .miniatura {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 683px) {
+    main {
+        margin: 30px;
+    }
+    
+    .video-titulo {
+        font-size: 4vw;
+    }
+    
+    .video-canal,.video-views,.video-fecha {
+        font-size: 2.3vw;
+    }
+
+    .division img {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .miniatura-movible {
+        width: 87.5vw;
+        height: 48.96vw;
+    }
+    
+    .miniatura {
+        width: 87.5vw;
+    }
+
+    section {    
+        visibility: hidden;
+    }
 }
