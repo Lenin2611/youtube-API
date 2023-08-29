@@ -14,10 +14,10 @@ a {
 }
 
 nav {
-    position: sticky;
+    position: static;
     top: 0;
     background-color: #fff;
-    overflow-x: scroll;
+    width: 100vw;
 }
 
 .sidebar {
@@ -172,7 +172,7 @@ input:focus,input:active {
 }
 
 main {
-    margin: 90px 0px 0px 80px;
+    margin: 90px 0px 0px 7vw;
     display: flex;
     flex-direction: row;
 }
@@ -246,6 +246,7 @@ iframe {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
+    width: 660px;
 }
 
 .descripcion-main {
@@ -388,4 +389,104 @@ iframe {
 
 .vistas {
     margin-right: 5px;
+}
+
+.comentarios-cantidad {
+    margin-block: 20px;
+    font-size: 15px;
+}
+
+.comentario-full {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comentario {
+    margin-bottom: 20px !important;
+    display: flex;
+    width: 660px;
+}
+
+.comentario img {
+    border-radius: 100%;
+    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+.comentario-contenido {
+    display: flex;
+}
+
+.comentarios-likes {
+    display: flex;
+    align-items: center;
+}
+
+.comentario-autor {
+    font-weight: 600;
+    font-size: 13px;
+    margin-right: 5px;
+    color: #000;
+}
+
+.comentario-date {
+    font-size: 12px !important;
+    color: #6a6a6a;
+}
+
+.contenido {
+    font-size: 14.5px;
+    margin-block: 5px;
+}
+
+.comentarios-like {
+    font-size: 20px;
+    color: #000;
+    margin-right: 3px;
+    border-radius: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.comentarios-like:hover,.comentarios-dislike:hover,.comentarios-responder:hover,.comentarios-puntos:hover {
+    background-color: #d3d3d3;
+}
+
+.likes-cantidad {
+    font-size: 13px;
+}
+
+.comentarios-dislike {
+    font-size: 20px;
+    color: #000;
+    margin-inline: 20px 30px;
+    border-radius: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.comentarios-responder {
+    border-radius: 50px;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #000;
+}
+
+.comentarios-puntos {
+    font-size: 20px;
+    color: #000;
+    margin-inline: 20px 30px;
+    border-radius: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -6,7 +6,7 @@ let searchAt = async () => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '73e28c1da2msh7b793f104045d42p1e8e85jsn631521a5c58e',
+            'X-RapidAPI-Key': '4ff04fe482mshcca87e0ce54b941p16fe8djsn0b9a16d15314',
             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         }
     };
@@ -26,7 +26,7 @@ let videoInfo = async(id) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '73e28c1da2msh7b793f104045d42p1e8e85jsn631521a5c58e',
+            'X-RapidAPI-Key': '4ff04fe482mshcca87e0ce54b941p16fe8djsn0b9a16d15314',
             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         }
     };
@@ -45,7 +45,7 @@ let comentario = async (id) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '73e28c1da2msh7b793f104045d42p1e8e85jsn631521a5c58e',
+            'X-RapidAPI-Key': '4ff04fe482mshcca87e0ce54b941p16fe8djsn0b9a16d15314',
             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         }
     };
@@ -56,7 +56,7 @@ let comentario = async (id) => {
         return (result);
     } catch (error) {
         console.error(error);
-        return null;
+        return "Los comentarios están desactivados.";
     }
 }
 
@@ -65,7 +65,7 @@ let relatedVideo = async (id) => {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '73e28c1da2msh7b793f104045d42p1e8e85jsn631521a5c58e',
+            'X-RapidAPI-Key': '4ff04fe482mshcca87e0ce54b941p16fe8djsn0b9a16d15314',
             'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
         }
     };
@@ -98,7 +98,7 @@ let page = async() => {
 
     let videoComentarios = await comentario(videoID);
     videoComentarios = JSON.parse(videoComentarios);
-    let comentarios = videoComentarios.contents;
+    let comentarios = videoComentarios.comments;
 
     let recomendadosHTML = document.querySelector("#myRecomendados");
     recomendadosHTML.innerHTML = "";
@@ -177,22 +177,27 @@ let page = async() => {
     <div class="comentarios-cantidad">${videoComentarios.totalCommentsCount} comentarios</div>
     <div class="comentarios-box">
     ${comentarios.map(value => /*html*/`
+        <div class="comentario-full">
             <div class="comentario">
                 <img src="${value.author.avatar[0].url}" alt="Foto Perfil Autor">
-                <div class="comentario-contenido">
-                    <div class="comentario-autor">${value.author.title}</div>
-                    <div class="comentario-date">${value.publishedTimeText}</div>
-                </div>
-                <div class="contenido">${value.content}</div>
-                <div class="comentarios-likes">
-                    <a href="#" class='bx bx-like like'></a>
-                    <div class="likes-cantidad">${value.stats.votes}</div>
-                    <a href="#" class='bx bx-dislike dislike'></a>
-                    <a class="comentarios-responder">Responder</a>
+                <div class="comentario-complete">
+                    <div class="comentario-contenido">
+                        <a href="#" class="comentario-autor">${value.author.title}</a>
+                        <div class="comentario-date">${value.publishedTimeText}</div>
+                    </div>
+                    <div class="contenido">${value.content}</div>
+                    <div class="comentarios-likes">
+                        <a href="#" class='comentarios-like bx bx-like like'></a>
+                        <div class="likes-cantidad">${value.stats.votes}</div>
+                        <a href="#" class='comentarios-dislike bx bx-dislike dislike'></a>
+                        <a href="#" class="comentarios-responder">Responder</a>
+                    </div>
                 </div>
             </div>
-            <a href="#"><i class='bx bx-dots-vertical'></i></a>
+            <div>
+                <a href="#" class='comentarios-puntos bx bx-dots-vertical'></a>
             </div>
+        </div>
         `).join("")}
     </div>`);
 }
