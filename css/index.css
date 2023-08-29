@@ -159,14 +159,13 @@ nav {
 }
 
 input {
+    padding-left: 10px;
     width: 40vw !important;
-
     border: none !important;
     box-shadow: none;
 }
 
 input:focus,input:active {
-    width: 40vw !important;
     height: 40px;
     border-radius: 50px 0px 0px 50px;
     box-shadow: none;
@@ -217,6 +216,10 @@ header span:hover {
     background-color: #e3e3e3;
 }
 
+#pedro {
+    display: none !important;
+}
+
 @media screen and (max-width: 999px) {
     nav {
         align-items: center;
@@ -251,22 +254,29 @@ header span:hover {
     }
 
     input {
-        width: 20vw !important;
+        width: 23vw !important;
+    }
+
+    input:hover {
+        width: 23vw !important;
     }
 }
 
 @media screen and (max-width: 656px) {
-    .header-top-center {
+    .micro {
         display: none !important;
     }
 
-    .lupita {
-        display: initial !important;
-        border: none !important;
+    input {
+        width: 10vw !important;
     }
 
-    .lupita:hover {
-        background-color: #e3e3e3 !important;
+    input:hover {
+        width: 10vw !important;
+    }
+
+    .header-top-center {
+        left: 39%;
     }
 }
 
