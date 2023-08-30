@@ -179,7 +179,7 @@ let page = async() => {
     let pageInformation = await searchAt();
     pageInformation = JSON.parse(pageInformation);
 
-    let videoID = pageInformation.contents[0].video.videoId;
+    let videoID = (pageInformation.contents[0].video).videoId;
 
     let videoInformacion = await videoInfo(videoID);
     videoInformacion = JSON.parse(videoInformacion);
